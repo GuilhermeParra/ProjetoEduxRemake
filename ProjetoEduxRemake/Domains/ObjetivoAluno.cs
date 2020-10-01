@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace ProjetoEduxRemake.Domains
@@ -20,6 +21,9 @@ namespace ProjetoEduxRemake.Domains
         [ForeignKey("IdObjetivo")]
         public Objetivo Objetivo { get; set; }
 
+        [JsonIgnore]
+        public virtual AlunoTurma IdAlunoTurmaNavigation { get; set; }
+        public virtual Objetivo IdObjetivoNavigation { get; set; }
         public ObjetivoAluno()
         {
             IdObjetivoAluno = Guid.NewGuid();

@@ -92,8 +92,7 @@ namespace ProjetoEduxRemake.Repositories
         {
             try
             {
-                Usuario usuario = new Usuario();
-                usuario.DataUltimoAcesso = DateTime.Now;
+                
 
                 return _context.Usuarios.ToList();
             }

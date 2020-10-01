@@ -1,5 +1,6 @@
 ﻿using ProjetoEduxRemake.Context;
 using ProjetoEduxRemake.Domains;
+using ProjetoEduxRemake.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoEduxRemake.Repositories
 {
-    public class CurtidaRepository
+    public class CurtidaRepository : ICurtida
     {
         private readonly EduxContext _context;
 
@@ -61,15 +62,12 @@ namespace ProjetoEduxRemake.Repositories
         {
             try
             {
-                Curtida curtidaEdit = BuscarPorId(curtida.IdUsuario);
+                Curtida curtidaEdit = BuscarPorId(curtida.IdCurtida);
 
                 if (curtidaEdit == null)
                 {
                     throw new Exception("Usuario nao encontrad");
                 }
-
-                curtidaEdit.IdUsuario = curtida.IdUsuario;
-                curtidaEdit.IdDica = curtida.IdDica;
 
                 _context.Curtidas.Update(curtidaEdit);
                 _context.SaveChanges();

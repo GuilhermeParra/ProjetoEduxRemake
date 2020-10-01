@@ -19,6 +19,7 @@ namespace ProjetoEduxRemake.Domains
         public string UF { get; set; }
         public string CEP { get; set; }
 
+        public virtual ICollection<Curso> Curso { get; set; }
         public Instituicao()
         {
             IdInstituicao = Guid.NewGuid();

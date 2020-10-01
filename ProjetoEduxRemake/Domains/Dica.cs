@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace ProjetoEduxRemake.Domains
@@ -12,11 +14,16 @@ namespace ProjetoEduxRemake.Domains
         [Key]
         public Guid IdDica { get; set; }
         public string Texto { get; set; }
-        public string Imagem { get; set; }
+        [NotMapped]
+        public IFormFile ImagemNova {get; set;}
+        public string UrlImagem { get; set; }
         public Guid IdUsuario { get; set; }
         [ForeignKey("IdUsuario")]
         public Usuario Usuario { get; set; }
 
+        [JsonIgnore]
+        public virtual Usuario IdUsuarioNavigation { get; set; }
+        public virtual ICollection<Curtida> Curtida { get; set; }
         public Dica()
         {
             IdDica = Guid.NewGuid();

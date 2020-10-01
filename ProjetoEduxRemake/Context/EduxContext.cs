@@ -30,5 +30,17 @@ namespace ProjetoEduxRemake.Context
                 optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-9K8CGCB\SQLEXPRESS;Initial Catalog=ProjetoEduxRemake;Persist Security Info=True;User ID=sa;Password=sa132");
             base.OnConfiguring(optionsBuilder);
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Curtida>()
+            .HasOne(b => b.Usuario)
+            .WithMany(a => a.Curtida)
+            .OnDelete(DeleteBehavior.NoAction);
+
+            base.OnModelCreating(modelBuilder);
+        }
+
+
     }
 }

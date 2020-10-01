@@ -13,6 +13,8 @@ namespace ProjetoEduxRemake.Domains
 
         public string Permissao { get; set; }
 
+
+        public virtual ICollection<Usuario> Usuario { get; set; }
         public Perfil()
         {
             IdPerfil = Guid.NewGuid();

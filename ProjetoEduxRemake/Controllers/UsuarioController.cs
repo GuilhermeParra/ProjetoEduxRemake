@@ -37,14 +37,14 @@ namespace ProjetoEduxRemake.Controllers
 
         // POST api/<UsuarioController>
         [HttpPost]
-        public void Post(Guid id, Usuario usuario)
+        public void Post([FromForm] Guid id, Usuario usuario)
         {
             _usuarioRepository.Adicionar(usuario);
         }
 
         // PUT api/<UsuarioController>/5
         [HttpPut("{id}")]
-        public void Put(Guid id, Usuario usuario)
+        public void Put([FromForm] Guid id, Usuario usuario)
         {
             usuario.IdUsuario = id;
             _usuarioRepository.Editar(usuario);

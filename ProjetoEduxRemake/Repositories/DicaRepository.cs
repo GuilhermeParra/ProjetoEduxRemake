@@ -1,5 +1,6 @@
 ﻿using ProjetoEduxRemake.Context;
 using ProjetoEduxRemake.Domains;
+using ProjetoEduxRemake.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoEduxRemake.Repositories
 {
-    public class DicaRepository
+    public class DicaRepository : IDica
     {
         private readonly EduxContext _context;
 
@@ -69,7 +70,6 @@ namespace ProjetoEduxRemake.Repositories
                 }
 
                 dicaEdit.Texto = dica.Texto;
-                dicaEdit.Imagem = dica.Imagem;
 
                 _context.Dicas.Update(dicaEdit);
                 _context.SaveChanges();

@@ -37,7 +37,7 @@ namespace ProjetoEduxRemake.Controllers
 
         // POST api/<PerfilController>
         [HttpPost]
-        public void Post(Guid id, Perfil perfil)
+        public void Post([FromForm] Guid id, Perfil perfil)
         {
             _perfilRepository.Adicionar(perfil);
         }

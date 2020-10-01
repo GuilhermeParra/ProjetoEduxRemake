@@ -1,5 +1,6 @@
 ﻿using ProjetoEduxRemake.Context;
 using ProjetoEduxRemake.Domains;
+using ProjetoEduxRemake.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoEduxRemake.Repositories
 {
-    public class AlunoTurmaRepository
+    public class AlunoTurmaRepository : IAlunoTurma
     {
         private readonly EduxContext _context;
 
@@ -24,8 +25,6 @@ namespace ProjetoEduxRemake.Repositories
         {
             try
             {
-                
-
                 _context.AlunosTurmas.Add(alunoTurma);
 
                 _context.SaveChanges();

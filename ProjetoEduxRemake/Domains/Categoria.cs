@@ -12,6 +12,7 @@ namespace ProjetoEduxRemake.Domains
         public Guid IdCategoria { get; set; }
         public string Tipo { get; set; }
 
+        public virtual ICollection<Objetivo> Objetivo { get; set; }
         public Categoria()
         {
             IdCategoria = Guid.NewGuid();
