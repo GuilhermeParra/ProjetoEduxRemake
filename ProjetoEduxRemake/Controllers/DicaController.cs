@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
@@ -37,9 +38,33 @@ namespace ProjetoEduxRemake.Controllers
 
         // POST api/<DicaController>
         [HttpPost]
-        public void Post([FromForm] Guid id, Dica dica)
+        public IActionResult Post([FromForm] Guid id, Dica dica)
         {
-            _dicaRepository.Adicionar(dica);
+            try
+            {
+                if (dica.ImagemNova != null)
+                {
+                    var nomeArquivo = Guid.NewGuid().ToString().Replace("-", "") + Path.GetExtension(dica.ImagemNova.FileName);
+                    var caminhoArquivo = Path.Combine(Directory.GetCurrentDirectory(), @"wwwRoot/Upload/Imagens", nomeArquivo);
+
+                    using var streamImagem = new FileStream(caminhoArquivo, FileMode.Create);
+
+                    dica.ImagemNova.CopyTo(streamImagem);
+
+                    dica.UrlImagem = "seulocalhost/Upload/Imagens" + nomeArquivo;
+
+                    
+
+                }
+
+                _dicaRepository.Adicionar(dica);
+
+                return Ok(dica);
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         // PUT api/<DicaController>/5

@@ -23,5 +23,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwRoot\Upload\Imagens\" />
+  </ItemGroup>
+
 
 </Project>
