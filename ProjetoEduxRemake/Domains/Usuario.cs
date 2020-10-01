@@ -31,7 +31,7 @@ namespace ProjetoEduxRemake.Domains
 
 
         //public virtual ICollection<Curtida> Curtidas { get; set; }
-        public virtual Perfil IdPerfilNavigation { get; set; }
+        
         public virtual ICollection<AlunoTurma> AlunosTurmas { get; set; }
         public virtual ICollection<ProfessorTurma> ProfessoresTurma { get; set; }
         public virtual ICollection<Curtida> Curtidas { get; set; }

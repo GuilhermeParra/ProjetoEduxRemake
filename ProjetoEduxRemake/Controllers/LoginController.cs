@@ -34,7 +34,7 @@ namespace ProjetoEduxRemake.Controllers
 
         private Usuario AuthenticateUser(Usuario login)
         {
-            return _context.Usuarios.Include(a => a.IdPerfilNavigation).FirstOrDefault(u => u.Email == login.Email && u.Senha == login.Senha);
+            return _context.Usuarios.Include(a => a.Perfil).FirstOrDefault(u => u.Email == login.Email && u.Senha == login.Senha);
         }
         // Criamos nosso método que vai gerar nosso Token
         private string GenerateJSONWebToken(Usuario userInfo)
@@ -48,7 +48,7 @@ namespace ProjetoEduxRemake.Controllers
         new Claim(JwtRegisteredClaimNames.NameId, userInfo.Nome),
         new Claim(JwtRegisteredClaimNames.Email, userInfo.Email),
         new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                new Claim(ClaimTypes.Role, userInfo.IdPerfilNavigation.Permissao)
+                new Claim(ClaimTypes.Role, userInfo.Perfil.Permissao)
     };
 
             // Configuramos nosso Token e seu tempo de vida

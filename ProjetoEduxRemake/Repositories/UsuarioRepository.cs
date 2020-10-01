@@ -25,8 +25,8 @@ namespace ProjetoEduxRemake.Repositories
         {
             try
             {
-                usuario.DataCadastro = DateTime.Now;
-                usuario.DataUltimoAcesso = DateTime.Now;
+                /*usuario.DataCadastro = DateTime.Now;
+                usuario.DataUltimoAcesso = DateTime.Now;*/
 
                 _context.Usuarios.Add(usuario);
 
@@ -67,14 +67,14 @@ namespace ProjetoEduxRemake.Repositories
 
                 if(usuarioEdit == null)
                 {
-                    throw new Exception("Usuario nao encontrad");
+                    throw new Exception("Usuario nao encontrado");
                 }
 
                 usuarioEdit.Nome = usuario.Nome;
                 usuarioEdit.Email = usuario.Email;
                 usuarioEdit.Senha = usuario.Senha;
 
-                _context.Usuarios.Update(usuarioEdit);
+                _context.Usuarios.Update(usuario);
                 _context.SaveChanges();
 
             }

@@ -17,8 +17,7 @@ namespace ProjetoEduxRemake.Domains
         [ForeignKey("IdCurso")]
         public Curso Curso { get; set; }
 
-        [JsonIgnore]
-        public virtual Curso IdCursoNavigation { get; set; }
+        
         public virtual ICollection<AlunoTurma> AlunosTurmas { get; set; }
         public virtual ICollection<ProfessorTurma> ProfessoresTurmas { get; set; }
         public Turma()

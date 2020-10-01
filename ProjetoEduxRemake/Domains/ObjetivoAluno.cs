@@ -25,9 +25,7 @@ namespace ProjetoEduxRemake.Domains
         [ForeignKey("IdObjetivo")]
         public Objetivo Objetivo { get; set; }
 
-        [JsonIgnore]
-        public virtual AlunoTurma IdAlunoTurmaNavigation { get; set; }
-        public virtual Objetivo IdObjetivoNavigation { get; set; }
+        
         
     }
 }

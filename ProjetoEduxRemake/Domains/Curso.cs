@@ -22,8 +22,7 @@ namespace ProjetoEduxRemake.Domains
         [ForeignKey("IdInstituicao")]
         public Instituicao Instituicao { get; set; }
 
-        [JsonIgnore]
-        public virtual Instituicao IdInstituicaoNavigation { get; set; }
+        
         public virtual ICollection<Turma> Turmas { get; set; }
         
     }

@@ -85,24 +85,14 @@ namespace ProjetoEduxRemake.Migrations
                     b.Property<Guid>("IdDica")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("IdDicaNavigationIdDica")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<Guid>("IdUsuario")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("IdUsuarioNavigationIdUsuario")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("IdCurtida");
 
                     b.HasIndex("IdDica");
 
-                    b.HasIndex("IdDicaNavigationIdDica");
-
                     b.HasIndex("IdUsuario");
-
-                    b.HasIndex("IdUsuarioNavigationIdUsuario");
 
                     b.ToTable("Curtidas");
                 });
@@ -113,18 +103,18 @@ namespace ProjetoEduxRemake.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Imagem")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<Guid>("IdUsuario")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Texto")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("UsuarioIdUsuario")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("UrlImagem")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("IdDica");
 
-                    b.HasIndex("UsuarioIdUsuario");
+                    b.HasIndex("IdUsuario");
 
                     b.ToTable("Dicas");
                 });
@@ -301,13 +291,13 @@ namespace ProjetoEduxRemake.Migrations
             modelBuilder.Entity("ProjetoEduxRemake.Domains.AlunoTurma", b =>
                 {
                     b.HasOne("ProjetoEduxRemake.Domains.Turma", "Turma")
-                        .WithMany()
+                        .WithMany("AlunosTurmas")
                         .HasForeignKey("IdTurma")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("ProjetoEduxRemake.Domains.Usuario", "Usuario")
-                        .WithMany()
+                        .WithMany("AlunosTurmas")
                         .HasForeignKey("IdUsuario")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -316,7 +306,7 @@ namespace ProjetoEduxRemake.Migrations
             modelBuilder.Entity("ProjetoEduxRemake.Domains.Curso", b =>
                 {
                     b.HasOne("ProjetoEduxRemake.Domains.Instituicao", "Instituicao")
-                        .WithMany()
+                        .WithMany("Cursos")
                         .HasForeignKey("IdInstituicao")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -325,37 +315,31 @@ namespace ProjetoEduxRemake.Migrations
             modelBuilder.Entity("ProjetoEduxRemake.Domains.Curtida", b =>
                 {
                     b.HasOne("ProjetoEduxRemake.Domains.Dica", "Dica")
-                        .WithMany()
+                        .WithMany("Curtidas")
                         .HasForeignKey("IdDica")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ProjetoEduxRemake.Domains.Dica", "IdDicaNavigation")
-                        .WithMany()
-                        .HasForeignKey("IdDicaNavigationIdDica");
-
                     b.HasOne("ProjetoEduxRemake.Domains.Usuario", "Usuario")
-                        .WithMany("Curtida")
+                        .WithMany("Curtidas")
                         .HasForeignKey("IdUsuario")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
-
-                    b.HasOne("ProjetoEduxRemake.Domains.Usuario", "IdUsuarioNavigation")
-                        .WithMany()
-                        .HasForeignKey("IdUsuarioNavigationIdUsuario");
                 });
 
             modelBuilder.Entity("ProjetoEduxRemake.Domains.Dica", b =>
                 {
-                    b.HasOne("ProjetoEduxRemake.Domains.Usuario", null)
+                    b.HasOne("ProjetoEduxRemake.Domains.Usuario", "Usuario")
                         .WithMany("Dicas")
-                        .HasForeignKey("UsuarioIdUsuario");
+                        .HasForeignKey("IdUsuario")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("ProjetoEduxRemake.Domains.Objetivo", b =>
                 {
                     b.HasOne("ProjetoEduxRemake.Domains.Categoria", "Categoria")
-                        .WithMany()
+                        .WithMany("Objetivos")
                         .HasForeignKey("IdCategoria")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -364,13 +348,13 @@ namespace ProjetoEduxRemake.Migrations
             modelBuilder.Entity("ProjetoEduxRemake.Domains.ObjetivoAluno", b =>
                 {
                     b.HasOne("ProjetoEduxRemake.Domains.AlunoTurma", "AlunoTurma")
-                        .WithMany()
+                        .WithMany("ObjetivoAlunos")
                         .HasForeignKey("IdAlunoTurma")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("ProjetoEduxRemake.Domains.Objetivo", "Objetivo")
-                        .WithMany()
+                        .WithMany("ObjetivosAlunos")
                         .HasForeignKey("IdObjetivo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -379,13 +363,13 @@ namespace ProjetoEduxRemake.Migrations
             modelBuilder.Entity("ProjetoEduxRemake.Domains.ProfessorTurma", b =>
                 {
                     b.HasOne("ProjetoEduxRemake.Domains.Turma", "Turma")
-                        .WithMany()
+                        .WithMany("ProfessoresTurmas")
                         .HasForeignKey("IdTurma")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("ProjetoEduxRemake.Domains.Usuario", "Usuario")
-                        .WithMany()
+                        .WithMany("ProfessoresTurma")
                         .HasForeignKey("IdUsuario")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -394,7 +378,7 @@ namespace ProjetoEduxRemake.Migrations
             modelBuilder.Entity("ProjetoEduxRemake.Domains.Turma", b =>
                 {
                     b.HasOne("ProjetoEduxRemake.Domains.Curso", "Curso")
-                        .WithMany()
+                        .WithMany("Turmas")
                         .HasForeignKey("IdCurso")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -403,7 +387,7 @@ namespace ProjetoEduxRemake.Migrations
             modelBuilder.Entity("ProjetoEduxRemake.Domains.Usuario", b =>
                 {
                     b.HasOne("ProjetoEduxRemake.Domains.Perfil", "Perfil")
-                        .WithMany()
+                        .WithMany("Usuarios")
                         .HasForeignKey("IdPerfil")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

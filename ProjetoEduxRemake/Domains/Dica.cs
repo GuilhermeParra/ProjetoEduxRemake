@@ -21,8 +21,7 @@ namespace ProjetoEduxRemake.Domains
         [ForeignKey("IdUsuario")]
         public Usuario Usuario { get; set; }
 
-        [JsonIgnore]
-        public virtual Usuario IdUsuarioNavigation { get; set; }
+        
         public virtual ICollection<Curtida> Curtidas { get; set; }
         public Dica()
         {

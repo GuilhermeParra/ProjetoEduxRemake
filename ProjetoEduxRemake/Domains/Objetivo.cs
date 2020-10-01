@@ -22,8 +22,7 @@ namespace ProjetoEduxRemake.Domains
         [ForeignKey("IdCategoria")]
         public Categoria Categoria { get; set; }
 
-        [JsonIgnore]
-        public virtual Categoria IdCategoriaNavigation { get; set; }
+        
         public virtual ICollection<ObjetivoAluno> ObjetivosAlunos { get; set; }
        
     }

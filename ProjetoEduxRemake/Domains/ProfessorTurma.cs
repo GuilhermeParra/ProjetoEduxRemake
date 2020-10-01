@@ -24,10 +24,7 @@ namespace ProjetoEduxRemake.Domains
         [ForeignKey("IdTurma")]
         public Turma Turma { get; set; }
 
-        [JsonIgnore]
-        public virtual Turma IdTurmaNavigation { get; set; }
-        [JsonIgnore]
-        public virtual Usuario IdUsuarioNavigation { get; set; }
+        
         
 
     }

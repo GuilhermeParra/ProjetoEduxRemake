@@ -27,11 +27,11 @@ namespace ProjetoEduxRemake.Context
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
-                optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-9K8CGCB\SQLEXPRESS;Initial Catalog=ProjetoEduxRemake;Persist Security Info=True;User ID=sa;Password=sa132");
+                optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-9K8CGCB\SQLEXPRESS;Initial Catalog=NewProjetoEduxRemake;Persist Security Info=True;User ID=sa;Password=sa132");
             base.OnConfiguring(optionsBuilder);
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        /*protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Curtida>()
             .HasOne(b => b.Usuario)
@@ -39,7 +39,8 @@ namespace ProjetoEduxRemake.Context
             .OnDelete(DeleteBehavior.NoAction);
 
             base.OnModelCreating(modelBuilder);
-        }
+        }*/
+
 
 
     }
