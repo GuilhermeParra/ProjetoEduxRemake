@@ -10,6 +10,10 @@ namespace ProjetoEduxRemake.Domains
 {
     public class ProfessorTurma
     {
+        public ProfessorTurma()
+        {
+            IdProfessorTurma = Guid.NewGuid();
+        }
         [Key]
         public Guid IdProfessorTurma { get; set; }
         public string Descricao { get; set; }
@@ -24,10 +28,7 @@ namespace ProjetoEduxRemake.Domains
         public virtual Turma IdTurmaNavigation { get; set; }
         [JsonIgnore]
         public virtual Usuario IdUsuarioNavigation { get; set; }
-        public ProfessorTurma()
-        {
-            IdProfessorTurma = Guid.NewGuid();
-        }
+        
 
     }
 }

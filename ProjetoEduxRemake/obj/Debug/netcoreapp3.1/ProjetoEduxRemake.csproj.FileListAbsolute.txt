@@ -65,3 +65,4 @@ C:\Users\parra\OneDrive\Documentos\NewEdux\ProjetoEduxRemake\bin\Debug\netcoreap
 C:\Users\parra\OneDrive\Documentos\NewEdux\ProjetoEduxRemake\obj\Debug\netcoreapp3.1\ProjetoEduxRemake.csproj.CoreCompileInputs.cache
 C:\Users\parra\OneDrive\Documentos\NewEdux\ProjetoEduxRemake\obj\Debug\netcoreapp3.1\ProjetoEduxRemake.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\parra\OneDrive\Documentos\NewEdux\ProjetoEduxRemake\obj\Debug\netcoreapp3.1\ProjetoEduxRemake.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\parra\OneDrive\Documentos\NewEdux\ProjetoEduxRemake\bin\Debug\netcoreapp3.1\ProjetoEduxRemake.xml

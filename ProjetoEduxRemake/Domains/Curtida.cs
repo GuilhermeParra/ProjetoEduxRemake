@@ -10,6 +10,11 @@ namespace ProjetoEduxRemake.Domains
 {
     public class Curtida
     {
+        public Curtida()
+        {
+            IdCurtida = Guid.NewGuid();
+
+        }
         [Key]
         public Guid IdCurtida { get; set; }
 
@@ -25,11 +30,7 @@ namespace ProjetoEduxRemake.Domains
         public virtual Dica IdDicaNavigation { get; set; }
         [JsonIgnore]
         public virtual Usuario IdUsuarioNavigation { get; set; }
-        public Curtida()
-        {
-            IdCurtida = Guid.NewGuid();
-                
-        }
+        
         
     }
 }

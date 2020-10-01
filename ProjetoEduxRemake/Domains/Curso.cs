@@ -10,6 +10,11 @@ namespace ProjetoEduxRemake.Domains
 {
     public class Curso 
     {
+        public Curso()
+        {
+            IdCurso = Guid.NewGuid();
+            Turmas = new HashSet<Turma>();
+        }
         [Key]
         public Guid IdCurso { get; set; }
         public string Titulo { get; set; }
@@ -19,10 +24,7 @@ namespace ProjetoEduxRemake.Domains
 
         [JsonIgnore]
         public virtual Instituicao IdInstituicaoNavigation { get; set; }
-        public virtual ICollection<Turma> Turma { get; set; }
-        public Curso()
-        {
-            IdCurso = Guid.NewGuid();
-        }
+        public virtual ICollection<Turma> Turmas { get; set; }
+        
     }
 }

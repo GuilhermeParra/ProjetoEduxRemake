@@ -35,7 +35,7 @@ namespace ProjetoEduxRemake.Context
         {
             modelBuilder.Entity<Curtida>()
             .HasOne(b => b.Usuario)
-            .WithMany(a => a.Curtida)
+            .WithMany(a => a.Curtidas)
             .OnDelete(DeleteBehavior.NoAction);
 
             base.OnModelCreating(modelBuilder);

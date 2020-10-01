@@ -23,10 +23,11 @@ namespace ProjetoEduxRemake.Domains
 
         [JsonIgnore]
         public virtual Usuario IdUsuarioNavigation { get; set; }
-        public virtual ICollection<Curtida> Curtida { get; set; }
+        public virtual ICollection<Curtida> Curtidas { get; set; }
         public Dica()
         {
             IdDica = Guid.NewGuid();
+            Curtidas = new HashSet<Curtida>();
         }
     }
 }

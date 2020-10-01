@@ -1,0 +1,446 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ProjetoEduxRemake</name>
+    </assembly>
+    <members>
+        <member name="M:ProjetoEduxRemake.Controllers.ProfessorTurmaController.Get">
+            <summary>
+            Lista todos os professores
+            </summary>
+            <returns>retorna uma lista de prodessores</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.ProfessorTurmaController.Get(System.Guid)">
+            <summary>
+            Busca determinado professor por seu id
+            </summary>
+            <param name="id">id do professor turma</param>
+            <returns>retorna o professor </returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.ProfessorTurmaController.Post(System.Guid,ProjetoEduxRemake.Domains.ProfessorTurma)">
+            <summary>
+            Adciona um novo Professor 
+            </summary>
+            <param name="id">id do professor</param>
+            <param name="professorTurma">nome do objeto</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.ProfessorTurmaController.Put(System.Guid,ProjetoEduxRemake.Domains.ProfessorTurma)">
+            <summary>
+            Edita um professor da turma
+            </summary>
+            <param name="id">id do professor </param>
+            <param name="professorTurma">nome do objeto</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.ProfessorTurmaController.Delete(System.Guid)">
+            <summary>
+            Exclui um professor
+            </summary>
+            <param name="id">id do professor</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.TurmaController.Get">
+            <summary>
+            Lista todas as turmas
+            </summary>
+            <returns>uma lista de tuma</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.TurmaController.Get(System.Guid)">
+            <summary>
+            Busca uma turma pelo seu id
+            </summary>
+            <param name="id">id da turma</param>
+            <returns>retorna id da turma</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.TurmaController.Post(System.Guid,ProjetoEduxRemake.Domains.Turma)">
+            <summary>
+            Adiciona uma turma
+            </summary>
+            <param name="id">id de uma turma</param>
+            <param name="turma">nome do objeto</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.TurmaController.Put(System.Guid,ProjetoEduxRemake.Domains.Turma)">
+            <summary>
+            Altera uma turma 
+            </summary>
+            <param name="id">Id de uma turma</param>
+            <param name="turma">Nome do objeto</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.TurmaController.Delete(System.Guid)">
+            <summary>
+            Exclui uma turma
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.AlunoTurmaRepository.Adicionar(ProjetoEduxRemake.Domains.AlunoTurma)">
+            <summary>
+            Cadastra um novo usuario
+            </summary>
+            <param name="usuario">Objeto a ser cadastrado</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.AlunoTurmaRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Busca um usuario pelo id
+            </summary>
+            <param name="id">Id de usuario</param>
+            <returns>O usuario procurado</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.AlunoTurmaRepository.Editar(ProjetoEduxRemake.Domains.AlunoTurma)">
+            <summary>
+            Altera um usuario
+            </summary>
+            <param name="usuario">Objeto a ser alterado</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.AlunoTurmaRepository.Listar">
+            <summary>
+            Mostra todos os usuarios cadastrados
+            </summary>
+            <returns>Uma lista de usuarios</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.AlunoTurmaRepository.Remover(System.Guid)">
+            <summary>
+            Remove um usuario
+            </summary>
+            <param name="id">Objeto de usuario</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.CategoriaRepository.Adicionar(ProjetoEduxRemake.Domains.Categoria)">
+            <summary>
+            Cadastra um novo usuario
+            </summary>
+            <param name="usuario">Objeto a ser cadastrado</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.CategoriaRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Busca um usuario pelo id
+            </summary>
+            <param name="id">Id de usuario</param>
+            <returns>O usuario procurado</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.CategoriaRepository.Editar(ProjetoEduxRemake.Domains.Categoria)">
+            <summary>
+            Altera um usuario
+            </summary>
+            <param name="usuario">Objeto a ser alterado</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.CategoriaRepository.Listar">
+            <summary>
+            Mostra todos os usuarios cadastrados
+            </summary>
+            <returns>Uma lista de usuarios</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.CategoriaRepository.Remover(System.Guid)">
+            <summary>
+            Remove um usuario
+            </summary>
+            <param name="id">Objeto de usuario</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.CursoRepository.Adicionar(ProjetoEduxRemake.Domains.Curso)">
+            <summary>
+            Cadastra um novo usuario
+            </summary>
+            <param name="usuario">Objeto a ser cadastrado</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.CursoRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Busca um usuario pelo id
+            </summary>
+            <param name="id">Id de usuario</param>
+            <returns>O usuario procurado</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.CursoRepository.Editar(ProjetoEduxRemake.Domains.Curso)">
+            <summary>
+            Altera um usuario
+            </summary>
+            <param name="usuario">Objeto a ser alterado</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.CursoRepository.Listar">
+            <summary>
+            Mostra todos os usuarios cadastrados
+            </summary>
+            <returns>Uma lista de usuarios</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.CursoRepository.Remover(System.Guid)">
+            <summary>
+            Remove um usuario
+            </summary>
+            <param name="id">Objeto de usuario</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.CurtidaRepository.Adicionar(ProjetoEduxRemake.Domains.Curtida)">
+            <summary>
+            Cadastra um novo usuario
+            </summary>
+            <param name="usuario">Objeto a ser cadastrado</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.CurtidaRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Busca um usuario pelo id
+            </summary>
+            <param name="id">Id de usuario</param>
+            <returns>O usuario procurado</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.CurtidaRepository.Editar(ProjetoEduxRemake.Domains.Curtida)">
+            <summary>
+            Altera um usuario
+            </summary>
+            <param name="usuario">Objeto a ser alterado</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.CurtidaRepository.Listar">
+            <summary>
+            Mostra todos os usuarios cadastrados
+            </summary>
+            <returns>Uma lista de usuarios</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.CurtidaRepository.Remover(System.Guid)">
+            <summary>
+            Remove um usuario
+            </summary>
+            <param name="id">Objeto de usuario</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.DicaRepository.Adicionar(ProjetoEduxRemake.Domains.Dica)">
+            <summary>
+            Cadastra um novo usuario
+            </summary>
+            <param name="usuario">Objeto a ser cadastrado</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.DicaRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Busca um usuario pelo id
+            </summary>
+            <param name="id">Id de usuario</param>
+            <returns>O usuario procurado</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.DicaRepository.Editar(ProjetoEduxRemake.Domains.Dica)">
+            <summary>
+            Altera um usuario
+            </summary>
+            <param name="usuario">Objeto a ser alterado</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.DicaRepository.Listar">
+            <summary>
+            Mostra todos os usuarios cadastrados
+            </summary>
+            <returns>Uma lista de usuarios</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.DicaRepository.Remover(System.Guid)">
+            <summary>
+            Remove um usuario
+            </summary>
+            <param name="id">Objeto de usuario</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.InstituicaoRepository.Adicionar(ProjetoEduxRemake.Domains.Instituicao)">
+            <summary>
+            Cadastra um novo usuario
+            </summary>
+            <param name="usuario">Objeto a ser cadastrado</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.InstituicaoRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Busca um usuario pelo id
+            </summary>
+            <param name="id">Id de usuario</param>
+            <returns>O usuario procurado</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.InstituicaoRepository.Editar(ProjetoEduxRemake.Domains.Instituicao)">
+            <summary>
+            Altera um usuario
+            </summary>
+            <param name="usuario">Objeto a ser alterado</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.InstituicaoRepository.Listar">
+            <summary>
+            Mostra todos os usuarios cadastrados
+            </summary>
+            <returns>Uma lista de usuarios</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.InstituicaoRepository.Remover(System.Guid)">
+            <summary>
+            Remove um usuario
+            </summary>
+            <param name="id">Objeto de usuario</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.ObjetivoAlunoRepository.Adicionar(ProjetoEduxRemake.Domains.ObjetivoAluno)">
+            <summary>
+            Cadastra um novo usuario
+            </summary>
+            <param name="usuario">Objeto a ser cadastrado</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.ObjetivoAlunoRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Busca um usuario pelo id
+            </summary>
+            <param name="id">Id de usuario</param>
+            <returns>O usuario procurado</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.ObjetivoAlunoRepository.Editar(ProjetoEduxRemake.Domains.ObjetivoAluno)">
+            <summary>
+            Altera um usuario
+            </summary>
+            <param name="usuario">Objeto a ser alterado</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.ObjetivoAlunoRepository.Listar">
+            <summary>
+            Mostra todos os usuarios cadastrados
+            </summary>
+            <returns>Uma lista de usuarios</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.ObjetivoAlunoRepository.Remover(System.Guid)">
+            <summary>
+            Remove um usuario
+            </summary>
+            <param name="id">Objeto de usuario</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.ObjetivoRepository.Adicionar(ProjetoEduxRemake.Domains.Objetivo)">
+            <summary>
+            Cadastra um novo usuario
+            </summary>
+            <param name="usuario">Objeto a ser cadastrado</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.ObjetivoRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Busca um usuario pelo id
+            </summary>
+            <param name="id">Id de usuario</param>
+            <returns>O usuario procurado</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.ObjetivoRepository.Editar(ProjetoEduxRemake.Domains.Objetivo)">
+            <summary>
+            Altera um usuario
+            </summary>
+            <param name="usuario">Objeto a ser alterado</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.ObjetivoRepository.Listar">
+            <summary>
+            Mostra todos os usuarios cadastrados
+            </summary>
+            <returns>Uma lista de usuarios</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.ObjetivoRepository.Remover(System.Guid)">
+            <summary>
+            Remove um usuario
+            </summary>
+            <param name="id">Objeto de usuario</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.PerfilRepository.Adicionar(ProjetoEduxRemake.Domains.Perfil)">
+            <summary>
+            Cadastra um novo perfil
+            </summary>
+            <param name="perfil">Objeto a ser cadastrado</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.PerfilRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Busca um perfil pelo id
+            </summary>
+            <param name="id">Id de perfil</param>
+            <returns>O perfil procurado</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.PerfilRepository.Editar(ProjetoEduxRemake.Domains.Perfil)">
+            <summary>
+            Altera um perfil
+            </summary>
+            <param name="perfil">Objeto a ser alterado</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.PerfilRepository.Listar">
+            <summary>
+            Mostra todos os perfis cadastrados
+            </summary>
+            <returns>Uma lista de perfis</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.PerfilRepository.Remover(System.Guid)">
+            <summary>
+            Remove um perfil
+            </summary>
+            <param name="id">Objeto de perfil</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.ProfessorTurmaRepository.Adicionar(ProjetoEduxRemake.Domains.ProfessorTurma)">
+            <summary>
+            Cadastra um novo usuario
+            </summary>
+            <param name="usuario">Objeto a ser cadastrado</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.ProfessorTurmaRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Busca um usuario pelo id
+            </summary>
+            <param name="id">Id de usuario</param>
+            <returns>O usuario procurado</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.ProfessorTurmaRepository.Editar(ProjetoEduxRemake.Domains.ProfessorTurma)">
+            <summary>
+            Altera um usuario
+            </summary>
+            <param name="usuario">Objeto a ser alterado</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.ProfessorTurmaRepository.Listar">
+            <summary>
+            Mostra todos os usuarios cadastrados
+            </summary>
+            <returns>Uma lista de usuarios</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.ProfessorTurmaRepository.Remover(System.Guid)">
+            <summary>
+            Remove um usuario
+            </summary>
+            <param name="id">Objeto de usuario</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.TurmaRepository.Adicionar(ProjetoEduxRemake.Domains.Turma)">
+            <summary>
+            Cadastra um novo usuario
+            </summary>
+            <param name="usuario">Objeto a ser cadastrado</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.TurmaRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Busca um usuario pelo id
+            </summary>
+            <param name="id">Id de usuario</param>
+            <returns>O usuario procurado</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.TurmaRepository.Editar(ProjetoEduxRemake.Domains.Turma)">
+            <summary>
+            Altera um usuario
+            </summary>
+            <param name="usuario">Objeto a ser alterado</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.TurmaRepository.Listar">
+            <summary>
+            Mostra todos os usuarios cadastrados
+            </summary>
+            <returns>Uma lista de usuarios</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.TurmaRepository.Remover(System.Guid)">
+            <summary>
+            Remove um usuario
+            </summary>
+            <param name="id">Objeto de usuario</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.UsuarioRepository.Adicionar(ProjetoEduxRemake.Domains.Usuario)">
+            <summary>
+            Cadastra um novo usuario
+            </summary>
+            <param name="usuario">Objeto a ser cadastrado</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.UsuarioRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Busca um usuario pelo id
+            </summary>
+            <param name="id">Id de usuario</param>
+            <returns>O usuario procurado</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.UsuarioRepository.Editar(ProjetoEduxRemake.Domains.Usuario)">
+            <summary>
+            Altera um usuario
+            </summary>
+            <param name="usuario">Objeto a ser alterado</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.UsuarioRepository.Listar">
+            <summary>
+            Mostra todos os usuarios cadastrados
+            </summary>
+            <returns>Uma lista de usuarios</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.UsuarioRepository.Remover(System.Guid)">
+            <summary>
+            Remove um usuario
+            </summary>
+            <param name="id">Objeto de usuario</param>
+        </member>
+    </members>
+</doc>

@@ -9,6 +9,14 @@ namespace ProjetoEduxRemake.Domains
 {
     public class Usuario
     {
+        public Usuario()
+        {
+            IdUsuario = Guid.NewGuid();
+            AlunosTurmas = new HashSet<AlunoTurma>();
+            Curtidas = new HashSet<Curtida>();
+            Dicas = new HashSet<Dica>();
+            ProfessoresTurma = new HashSet<ProfessorTurma>();
+        }
         [Key]
         public Guid IdUsuario { get; set; }
         public string Nome { get; set; }
@@ -24,15 +32,11 @@ namespace ProjetoEduxRemake.Domains
 
         //public virtual ICollection<Curtida> Curtidas { get; set; }
         public virtual Perfil IdPerfilNavigation { get; set; }
-        public virtual ICollection<AlunoTurma> AlunoTurma { get; set; }
-        public virtual ICollection<ProfessorTurma> ProfessorTurma { get; set; }
-        public virtual ICollection<Dica> Dica { get; set; }
-        public List<Curtida> Curtida { get; set; }
-        public Usuario()
-        {
-            IdUsuario = Guid.NewGuid();
-            Curtida = new List<Curtida>();
-        }
+        public virtual ICollection<AlunoTurma> AlunosTurmas { get; set; }
+        public virtual ICollection<ProfessorTurma> ProfessoresTurma { get; set; }
+        public virtual ICollection<Curtida> Curtidas { get; set; }
+        public virtual ICollection<Dica> Dicas { get; set; }
+        
        
     }
 }

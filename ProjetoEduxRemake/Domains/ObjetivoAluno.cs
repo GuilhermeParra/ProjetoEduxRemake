@@ -10,6 +10,10 @@ namespace ProjetoEduxRemake.Domains
 {
     public class ObjetivoAluno
     {
+        public ObjetivoAluno()
+        {
+            IdObjetivoAluno = Guid.NewGuid();
+        }
         [Key]
         public Guid IdObjetivoAluno { get; set; }
         public decimal Nota { get; set; }
@@ -24,9 +28,6 @@ namespace ProjetoEduxRemake.Domains
         [JsonIgnore]
         public virtual AlunoTurma IdAlunoTurmaNavigation { get; set; }
         public virtual Objetivo IdObjetivoNavigation { get; set; }
-        public ObjetivoAluno()
-        {
-            IdObjetivoAluno = Guid.NewGuid();
-        }
+        
     }
 }

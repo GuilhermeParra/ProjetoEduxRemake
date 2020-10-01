@@ -10,6 +10,11 @@ namespace ProjetoEduxRemake.Domains
 {
     public class Objetivo
     {
+        public Objetivo()
+        {
+            IdObjetivo = Guid.NewGuid();
+            ObjetivosAlunos = new HashSet<ObjetivoAluno>();
+        }
         [Key]
         public Guid IdObjetivo { get; set; }
         public string Descricao { get; set; }
@@ -19,10 +24,7 @@ namespace ProjetoEduxRemake.Domains
 
         [JsonIgnore]
         public virtual Categoria IdCategoriaNavigation { get; set; }
-        public virtual ICollection<ObjetivoAluno> ObjetivoAluno { get; set; }
-        public Objetivo()
-        {
-            IdObjetivo = Guid.NewGuid();
-        }
+        public virtual ICollection<ObjetivoAluno> ObjetivosAlunos { get; set; }
+       
     }
 }

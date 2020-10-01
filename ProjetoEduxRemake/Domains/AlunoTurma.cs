@@ -10,6 +10,11 @@ namespace ProjetoEduxRemake.Domains
 {
     public class AlunoTurma 
     {
+        public AlunoTurma()
+        {
+            IdAlunoTurma = Guid.NewGuid();
+            ObjetivoAlunos = new HashSet<ObjetivoAluno>();
+        }
         [Key]
         public Guid IdAlunoTurma { get; set; }
         public string Matricula { get; set; }
@@ -23,10 +28,6 @@ namespace ProjetoEduxRemake.Domains
         [JsonIgnore]
         public virtual Turma IdTurmaNavigation { get; set; }
         public virtual Usuario IdUsuarioNavigation { get; set; }
-        public virtual ICollection<ObjetivoAluno> ObjetivoAluno { get; set; }
-        public AlunoTurma()
-        {
-            IdAlunoTurma = Guid.NewGuid();
-        }
+        public virtual ICollection<ObjetivoAluno>ObjetivoAlunos { get; set; }
     }
 }

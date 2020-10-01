@@ -37,17 +37,22 @@ namespace ProjetoEduxRemake.Controllers
 
         // POST api/<CategoriaAlunoController>
         [HttpPost]
-        public void Post([FromForm] Guid id, Categoria categoria)
+        public IActionResult Post([FromForm] Guid id, Categoria categoria)
         {
             _CategoriaRepository.Adicionar(categoria);
+
+            return CreatedAtAction("GetCategoria", new { id = categoria.IdCategoria }, categoria);
         }
 
         // PUT api/<CategoriaController>/5
         [HttpPut("{id}")]
-        public void Put(Guid id, Categoria categoria)
+        public IActionResult Put(Guid id, Categoria categoria)
         {
             categoria.IdCategoria = id;
             _CategoriaRepository.Editar(categoria);
+
+            return CreatedAtAction("GetCategoria", new { id = categoria.IdCategoria }, categoria);
+
         }
 
         // DELETE api/<CategoriaController>/5
