@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using ProjetoEdux2._0.Utils.Crypt;
 using ProjetoEduxRemake.Context;
 using ProjetoEduxRemake.Domains;
 
@@ -34,6 +35,9 @@ namespace ProjetoEduxRemake.Controllers
 
         private Usuario AuthenticateUser(Usuario login)
         {
+            login.Senha = Crypto.Criptografar(login.Senha, login.Email.Substring(0, 4));
+
+
             return _context.Usuarios.Include(a => a.Perfil).FirstOrDefault(u => u.Email == login.Email && u.Senha == login.Senha);
         }
         // Criamos nosso método que vai gerar nosso Token
@@ -48,7 +52,8 @@ namespace ProjetoEduxRemake.Controllers
         new Claim(JwtRegisteredClaimNames.NameId, userInfo.Nome),
         new Claim(JwtRegisteredClaimNames.Email, userInfo.Email),
         new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                new Claim(ClaimTypes.Role, userInfo.Perfil.Permissao)
+        new Claim(ClaimTypes.Role, userInfo.Perfil.Permissao),
+        new Claim("role", userInfo.Perfil.Permissao)
     };
 
             // Configuramos nosso Token e seu tempo de vida
@@ -66,6 +71,7 @@ namespace ProjetoEduxRemake.Controllers
 
         // Usamos a anotação "AllowAnonymous" para 
         // ignorar a autenticação neste método, já que é ele quem fará isso
+        
         [AllowAnonymous]
         [HttpPost]
         public IActionResult Login([FromBody] Usuario login)

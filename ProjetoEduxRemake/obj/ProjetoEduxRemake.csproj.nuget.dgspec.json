@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\parra\\OneDrive\\Documentos\\NewEdux\\ProjetoEduxRemake\\ProjetoEduxRemake.csproj": {}
+    "C:\\Users\\parra\\OneDrive\\Documentos\\Senai\\NewEdux\\ProjetoEduxRemake\\ProjetoEduxRemake.csproj": {}
   },
   "projects": {
-    "C:\\Users\\parra\\OneDrive\\Documentos\\NewEdux\\ProjetoEduxRemake\\ProjetoEduxRemake.csproj": {
+    "C:\\Users\\parra\\OneDrive\\Documentos\\Senai\\NewEdux\\ProjetoEduxRemake\\ProjetoEduxRemake.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\parra\\OneDrive\\Documentos\\NewEdux\\ProjetoEduxRemake\\ProjetoEduxRemake.csproj",
+        "projectUniqueName": "C:\\Users\\parra\\OneDrive\\Documentos\\Senai\\NewEdux\\ProjetoEduxRemake\\ProjetoEduxRemake.csproj",
         "projectName": "ProjetoEduxRemake",
-        "projectPath": "C:\\Users\\parra\\OneDrive\\Documentos\\NewEdux\\ProjetoEduxRemake\\ProjetoEduxRemake.csproj",
+        "projectPath": "C:\\Users\\parra\\OneDrive\\Documentos\\Senai\\NewEdux\\ProjetoEduxRemake\\ProjetoEduxRemake.csproj",
         "packagesPath": "C:\\Users\\parra\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\parra\\OneDrive\\Documentos\\NewEdux\\ProjetoEduxRemake\\obj\\",
+        "outputPath": "C:\\Users\\parra\\OneDrive\\Documentos\\Senai\\NewEdux\\ProjetoEduxRemake\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

@@ -380,6 +380,19 @@
             </summary>
             <param name="id">Objeto de usuario</param>
         </member>
+        <member name="M:ProjetoEduxRemake.Repositories.RankingRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Busca um usuario pelo id
+            </summary>
+            <param name="id">Id de usuario</param>
+            <returns>O usuario procurado</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Repositories.RankingRepository.Listar">
+            <summary>
+            Mostra todos os usuarios cadastrados
+            </summary>
+            <returns>Uma lista de usuarios</returns>
+        </member>
         <member name="M:ProjetoEduxRemake.Repositories.TurmaRepository.Adicionar(ProjetoEduxRemake.Domains.Turma)">
             <summary>
             Cadastra um novo usuario

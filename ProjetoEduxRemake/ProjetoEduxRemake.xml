@@ -4,6 +4,300 @@
         <name>ProjetoEduxRemake</name>
     </assembly>
     <members>
+        <member name="M:ProjetoEduxRemake.Controllers.AlunoTurmaController.Get">
+            <summary>
+            Mostra todas as turmas que o aluno está cadastrado
+            </summary>
+            <returns>Lista de Matricula</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.AlunoTurmaController.Get(System.Guid)">
+            <summary>
+            Mostra a turma em que o aluno especificado pelo Id está cadastrado
+            </summary>
+            <param name="id">id da Matrícula</param>
+            <returns>Lista de Matricula de um aluno específico</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:ProjetoEduxRemake.Controllers.AlunoTurmaController.Post(System.Guid,ProjetoEduxRemake.Domains.AlunoTurma)" -->
+        <member name="M:ProjetoEduxRemake.Controllers.AlunoTurmaController.Put(System.Guid,ProjetoEduxRemake.Domains.AlunoTurma)">
+            <summary>
+            Edita elementos da matricula
+            </summary>
+            <param name="id">Id de AlunoTurma</param>
+            <param name="alunoTurma">Entidade AlunoTurma</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.AlunoTurmaController.Delete(System.Guid)">
+            <summary>
+            Apaga uma Matrícula
+            </summary>
+            <param name="id">Id AlunoTurma</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.CategoriaController.Get">
+            <summary>
+            Mostra todas as categorias existentes
+            </summary>
+            <returns>Uma lista de categoria</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.CategoriaController.Get(System.Guid)">
+            <summary>
+            Retorna um categoria específica pelo seu Id
+            </summary>
+            <param name="id">Id de categoria</param>
+            <returns>Uma categoria específica</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.CategoriaController.Post(System.Guid,ProjetoEduxRemake.Domains.Categoria)">
+            <summary>
+            Adiciona uma nova categoria
+            </summary>
+            <param name="id">id de uma categoria</param>
+            <param name="categoria">Uma categoria</param>
+            <returns>Uma categoria criada</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.CategoriaController.Put(System.Guid,ProjetoEduxRemake.Domains.Categoria)">
+            <summary>
+            Edita uma categoria ja existente
+            </summary>
+            <param name="id">id da categoria</param>
+            <param name="categoria">Uma entidade categoria</param>
+            <returns>Uma categoria editada</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.CategoriaController.Delete(System.Guid)">
+            <summary>
+            Apaga uma categoria
+            </summary>
+            <param name="id">id da categoria</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.CursoController.Get">
+            <summary>
+            Mostra todos os cursos existentes
+            </summary>
+            <returns>Retorna uma lista de cursos</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.CursoController.Get(System.Guid)">
+            <summary>
+            Mostra um curso especificado pelo seu id
+            </summary>
+            <param name="id">Recebe o id do curso</param>
+            <returns>Retorna um curso especifico</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.CursoController.Post(System.Guid,ProjetoEduxRemake.Domains.Curso)">
+            <summary>
+            Adiciona um novo curso
+            </summary>
+            <param name="id">Recebe o id do curso</param>
+            <param name="curso">Entidade curso</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.CursoController.Put(System.Guid,ProjetoEduxRemake.Domains.Curso)">
+            <summary>
+            Edita um curso já existente
+            </summary>
+            <param name="id">Recebe o id do curso</param>
+            <param name="curso">Entidade curso</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.CursoController.Delete(System.Guid)">
+            <summary>
+            Apaga um curso existente
+            </summary>
+            <param name="id">Recebe o id do curso</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.CurtidaController.Get">
+            <summary>
+            Mostra todas as curtidas existentes
+            </summary>
+            <returns>Retorna uma lista de curtidas</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.CurtidaController.Get(System.Guid)">
+            <summary>
+            Mostra uma curtida especifica
+            </summary>
+            <param name="id">Id de uma curtida</param>
+            <returns>Retorna uma curtida específica</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.CurtidaController.Post(System.Guid,ProjetoEduxRemake.Domains.Curtida)">
+            <summary>
+            Adiciona uma nova curtida
+            </summary>
+            <param name="id">Id de uma curtida</param>
+            <param name="curtida">Uma curtida</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.CurtidaController.Put(System.Guid,ProjetoEduxRemake.Domains.Curtida)">
+            <summary>
+            Edita uma curtida existente
+            </summary>
+            <param name="id">Id de uma curtida</param>
+            <param name="curtida">Uma curtida</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.CurtidaController.Delete(System.Guid)">
+            <summary>
+            Remove uma curtida existente
+            </summary>
+            <param name="id">Id de uma curtida</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.DicaController.Get">
+            <summary>
+            Mostra todas as Dicas existentes
+            </summary>
+            <returns>Retorna uma lista de dicas</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.DicaController.Get(System.Guid)">
+            <summary>
+            Mostra um dicas especificada pelo Id
+            </summary>
+            <param name="id">Id de uma dica</param>
+            <returns>Retorna uma dica especifica</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.DicaController.Post(System.Guid,ProjetoEduxRemake.Domains.Dica)">
+            <summary>
+            Adiciona uma nova dica
+            </summary>
+            <param name="id">Id de uma dica</param>
+            <param name="dica">Uma dica</param>
+            <returns>O a dic0 cadastradaa</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.DicaController.Put(System.Guid,ProjetoEduxRemake.Domains.Dica)">
+            <summary>
+            Edita uma dica existente
+            </summary>
+            <param name="id">Id de uma dica</param>
+            <param name="dica">Uma dica</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.DicaController.Delete(System.Guid)">
+            <summary>
+            Remove uma deica existente
+            </summary>
+            <param name="id">Id de uma dica</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.InstituicaoController.Get">
+            <summary>
+            Mostra todas as Instituições
+            </summary>
+            <returns>Retorna uma ista de Instituições</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.InstituicaoController.Get(System.Guid)">
+            <summary>
+            Mostra uma instituição específica
+            </summary>
+            <param name="id">Id de uma instituição</param>
+            <returns>Retorna uma instituição específica</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.InstituicaoController.Post(System.Guid,ProjetoEduxRemake.Domains.Instituicao)">
+            <summary>
+            Adiciona uma nova instituição
+            </summary>
+            <param name="id">Id de uma instituição</param>
+            <param name="instituicao">Objeto Instituição</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.InstituicaoController.Put(System.Guid,ProjetoEduxRemake.Domains.Instituicao)">
+            <summary>
+            edita uma instituição ja existente
+            </summary>
+            <param name="id">Id de uma instituição</param>
+            <param name="instituicao">Objeto Instituição</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.InstituicaoController.Delete(System.Guid)">
+            <summary>
+            Remove uma instituição existente
+            </summary>
+            <param name="id">Id de uma Instituição</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.ObjetivoAlunoController.Get">
+            <summary>
+            Mostra todos os objetivos dos alunos
+            </summary>
+            <returns>Retorna uma lista de ObjetivoAluno</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.ObjetivoAlunoController.Get(System.Guid)">
+            <summary>
+            Mostra um ObjetivoAluno especifico
+            </summary>
+            <param name="id">Id do ObjetivoAluno</param>
+            <returns>Retorna um ObjetivoAluno específico</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.ObjetivoAlunoController.Post(System.Guid,ProjetoEduxRemake.Domains.ObjetivoAluno)">
+            <summary>
+            Adiciona um novo ObjetivoAluno
+            </summary>
+            <param name="id">ID de ObjetivoAluno</param>
+            <param name="objetivoAluno">Objeto ObjetivoAluno</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.ObjetivoAlunoController.Put(System.Guid,ProjetoEduxRemake.Domains.ObjetivoAluno)">
+            <summary>
+            Edita um ObjetivoAluno ja existente
+            </summary>
+            <param name="id">Id de ObjetivoAluno</param>
+            <param name="objetivoAluno">Objeto ObjetivoALuno</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.ObjetivoAlunoController.Delete(System.Guid)">
+            <summary>
+            Remove um ObjetivoAluno
+            </summary>
+            <param name="id">Id de um ObjetivoAluno</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.ObjetivoController.Get">
+            <summary>
+            Mostra todos os objetivos existentes
+            </summary>
+            <returns>Retorna uma lista de Objetivo</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.ObjetivoController.Get(System.Guid)">
+            <summary>
+            Mostra um objetivo específicado
+            </summary>
+            <param name="id">Id de Objetivo</param>
+            <returns>Retorna um objetivo específicado pelo Id</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.ObjetivoController.Post(System.Guid,ProjetoEduxRemake.Domains.Objetivo)">
+            <summary>
+            Adiciona um novo objetivo
+            </summary>
+            <param name="id">Id de objetivo</param>
+            <param name="objetivo">Objeto Objetivo</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.ObjetivoController.Put(System.Guid,ProjetoEduxRemake.Domains.Objetivo)">
+            <summary>
+            Edita um objetivo ja existente
+            </summary>
+            <param name="id">Id de objetivo</param>
+            <param name="objetivo">Objeto Objetivo</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.ObjetivoController.Delete(System.Guid)">
+            <summary>
+            Remove um objeto ja existente
+            </summary>
+            <param name="id">Id de Objetivo</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.PerfilController.Get">
+            <summary>
+            Lista Todos Os perfis
+            </summary>
+            <returns>Retorna lista de perfis</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.PerfilController.Get(System.Guid)">
+            <summary>
+            Busca um Perfil por seu id
+            </summary>
+            <param name="id">Id do Perfil</param>
+            <returns>Uma busca pelo id do perfil</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.PerfilController.Post(System.Guid,ProjetoEduxRemake.Domains.Perfil)">
+            <summary>
+            Adiciona um novo perfil 
+            </summary>
+            <param name="id">id do perfil</param>
+            <param name="perfil">objeto perfil</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.PerfilController.Put(System.Guid,ProjetoEduxRemake.Domains.Perfil)">
+            <summary>
+            Edita um perfil existente
+            </summary>
+            <param name="id">id do Perfil</param>
+            <param name="perfil">Objeto Perfil</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.PerfilController.Delete(System.Guid)">
+            <summary>
+            Exclui um Perfil
+            </summary>
+            <param name="id">id do Perfil</param>
+        </member>
         <member name="M:ProjetoEduxRemake.Controllers.ProfessorTurmaController.Get">
             <summary>
             Lista todos os professores
@@ -70,253 +364,288 @@
             </summary>
             <param name="id"></param>
         </member>
+        <member name="M:ProjetoEduxRemake.Controllers.UsuarioController.Get">
+            <summary>
+            Mostra todos os usuários existentes
+            </summary>
+            <returns>Retorna uma lista de usuários</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.UsuarioController.Get(System.Guid,ProjetoEduxRemake.Domains.Usuario)">
+            <summary>
+            Retorna um usuário especificado pelo id
+            </summary>
+            <param name="id">Id de um usuário</param>
+            <param name="usuario">Objeto usuário</param>
+            <returns>Umusuário específico</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.UsuarioController.Post(System.Guid,ProjetoEduxRemake.Domains.Usuario)">
+            <summary>
+            Adiciona um novo usuário
+            </summary>
+            <param name="id">Id de um usuário</param>
+            <param name="usuario">Objeto usuário</param>
+            <returns>Retorna um usário cadastrado</returns>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.UsuarioController.Put(System.Guid,ProjetoEduxRemake.Domains.Usuario)">
+            <summary>
+            Edita um usuário existente
+            </summary>
+            <param name="id">Id de um usuário</param>
+            <param name="usuario">Objeto usuário</param>
+        </member>
+        <member name="M:ProjetoEduxRemake.Controllers.UsuarioController.Delete(System.Guid)">
+            <summary>
+            Remove um usuário existente
+            </summary>
+            <param name="id">Id de um usuário</param>
+        </member>
         <member name="M:ProjetoEduxRemake.Repositories.AlunoTurmaRepository.Adicionar(ProjetoEduxRemake.Domains.AlunoTurma)">
             <summary>
-            Cadastra um novo usuario
+            Cadastra um novo aluno
             </summary>
-            <param name="usuario">Objeto a ser cadastrado</param>
+            <param name="alunoTurma">Objeto a ser cadastrado</param>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.AlunoTurmaRepository.BuscarPorId(System.Guid)">
             <summary>
-            Busca um usuario pelo id
+            Busca um aluno pelo id
             </summary>
-            <param name="id">Id de usuario</param>
-            <returns>O usuario procurado</returns>
+            <param name="id">Id de aluno</param>
+            <returns>O aluno procurado</returns>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.AlunoTurmaRepository.Editar(ProjetoEduxRemake.Domains.AlunoTurma)">
             <summary>
-            Altera um usuario
+            Altera um aluno
             </summary>
-            <param name="usuario">Objeto a ser alterado</param>
+            <param name="alunoTurma">Objeto a ser alterado</param>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.AlunoTurmaRepository.Listar">
             <summary>
-            Mostra todos os usuarios cadastrados
+            Mostra todos os alunos cadastrados
             </summary>
-            <returns>Uma lista de usuarios</returns>
+            <returns>Uma lista de alunos</returns>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.AlunoTurmaRepository.Remover(System.Guid)">
             <summary>
-            Remove um usuario
+            Remove um aluno
             </summary>
-            <param name="id">Objeto de usuario</param>
+            <param name="id">Objeto de aluno</param>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.CategoriaRepository.Adicionar(ProjetoEduxRemake.Domains.Categoria)">
             <summary>
-            Cadastra um novo usuario
+            Cadastra um novo categoria
             </summary>
-            <param name="usuario">Objeto a ser cadastrado</param>
+            <param name="categoria">Objeto a ser cadastrado</param>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.CategoriaRepository.BuscarPorId(System.Guid)">
             <summary>
-            Busca um usuario pelo id
+            Busca uma categoria pelo id
             </summary>
-            <param name="id">Id de usuario</param>
-            <returns>O usuario procurado</returns>
+            <param name="id">Id de categoria</param>
+            <returns>A categoria procurado</returns>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.CategoriaRepository.Editar(ProjetoEduxRemake.Domains.Categoria)">
             <summary>
-            Altera um usuario
+            Altera uma categoria
             </summary>
-            <param name="usuario">Objeto a ser alterado</param>
+            <param name="categoria">Objeto a ser alterado</param>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.CategoriaRepository.Listar">
             <summary>
-            Mostra todos os usuarios cadastrados
+            Mostra todos as categoria cadastrados
             </summary>
-            <returns>Uma lista de usuarios</returns>
+            <returns>Uma lista de categorias</returns>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.CategoriaRepository.Remover(System.Guid)">
             <summary>
-            Remove um usuario
+            Remove uma categoria
             </summary>
-            <param name="id">Objeto de usuario</param>
+            <param name="id">Objeto de categoria</param>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.CursoRepository.Adicionar(ProjetoEduxRemake.Domains.Curso)">
             <summary>
-            Cadastra um novo usuario
+            Cadastra um novo curso
             </summary>
-            <param name="usuario">Objeto a ser cadastrado</param>
+            <param name="curso">Objeto a ser cadastrado</param>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.CursoRepository.BuscarPorId(System.Guid)">
             <summary>
-            Busca um usuario pelo id
+            Busca um curso pelo id
             </summary>
-            <param name="id">Id de usuario</param>
-            <returns>O usuario procurado</returns>
+            <param name="id">Id de curso</param>
+            <returns>O curso procurado</returns>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.CursoRepository.Editar(ProjetoEduxRemake.Domains.Curso)">
             <summary>
-            Altera um usuario
+            Altera um curso
             </summary>
-            <param name="usuario">Objeto a ser alterado</param>
+            <param name="curso">Objeto a ser alterado</param>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.CursoRepository.Listar">
             <summary>
-            Mostra todos os usuarios cadastrados
+            Mostra todos os cursos cadastrados
             </summary>
-            <returns>Uma lista de usuarios</returns>
+            <returns>Uma lista de cursos</returns>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.CursoRepository.Remover(System.Guid)">
             <summary>
-            Remove um usuario
+            Remove um curso
             </summary>
-            <param name="id">Objeto de usuario</param>
+            <param name="id">Objeto de curso</param>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.CurtidaRepository.Adicionar(ProjetoEduxRemake.Domains.Curtida)">
             <summary>
-            Cadastra um novo usuario
+            Cadastra uma nova curtida
             </summary>
-            <param name="usuario">Objeto a ser cadastrado</param>
+            <param name="curtida">Objeto a ser cadastrado</param>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.CurtidaRepository.BuscarPorId(System.Guid)">
             <summary>
-            Busca um usuario pelo id
+            Busca uma curtida pelo id
             </summary>
-            <param name="id">Id de usuario</param>
-            <returns>O usuario procurado</returns>
+            <param name="id">Id de curtida</param>
+            <returns>A curtida procurado</returns>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.CurtidaRepository.Editar(ProjetoEduxRemake.Domains.Curtida)">
             <summary>
-            Altera um usuario
+            Altera umA curtida
             </summary>
-            <param name="usuario">Objeto a ser alterado</param>
+            <param name="curtida">Objeto a ser alterado</param>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.CurtidaRepository.Listar">
             <summary>
-            Mostra todos os usuarios cadastrados
+            Mostra todas as curtidas cadastrados
             </summary>
-            <returns>Uma lista de usuarios</returns>
+            <returns>Uma lista de curtidas</returns>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.CurtidaRepository.Remover(System.Guid)">
             <summary>
-            Remove um usuario
+            Remove uma curtida
             </summary>
-            <param name="id">Objeto de usuario</param>
+            <param name="id">Objeto de curtida</param>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.DicaRepository.Adicionar(ProjetoEduxRemake.Domains.Dica)">
             <summary>
-            Cadastra um novo usuario
+            Cadastra uma nova dica
             </summary>
-            <param name="usuario">Objeto a ser cadastrado</param>
+            <param name="dica">Objeto a ser cadastrado</param>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.DicaRepository.BuscarPorId(System.Guid)">
             <summary>
-            Busca um usuario pelo id
+            Busca uma dica pelo id
             </summary>
-            <param name="id">Id de usuario</param>
-            <returns>O usuario procurado</returns>
+            <param name="id">Id de dica</param>
+            <returns>A dica procurado</returns>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.DicaRepository.Editar(ProjetoEduxRemake.Domains.Dica)">
             <summary>
-            Altera um usuario
+            Altera uma dica
             </summary>
-            <param name="usuario">Objeto a ser alterado</param>
+            <param name="dica">Objeto a ser alterado</param>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.DicaRepository.Listar">
             <summary>
-            Mostra todos os usuarios cadastrados
+            Mostra todos as dica cadastradas
             </summary>
-            <returns>Uma lista de usuarios</returns>
+            <returns>Uma lista de dicas</returns>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.DicaRepository.Remover(System.Guid)">
             <summary>
-            Remove um usuario
+            Remove uma dica
             </summary>
-            <param name="id">Objeto de usuario</param>
+            <param name="id">Objeto de dica</param>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.InstituicaoRepository.Adicionar(ProjetoEduxRemake.Domains.Instituicao)">
             <summary>
-            Cadastra um novo usuario
+            Cadastra uma nova instituicao
             </summary>
-            <param name="usuario">Objeto a ser cadastrado</param>
+            <param name="instituicao">Objeto a ser cadastrado</param>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.InstituicaoRepository.BuscarPorId(System.Guid)">
             <summary>
-            Busca um usuario pelo id
+            Busca uma instituicao pelo id
             </summary>
-            <param name="id">Id de usuario</param>
+            <param name="id">Id de instituicao</param>
             <returns>O usuario procurado</returns>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.InstituicaoRepository.Editar(ProjetoEduxRemake.Domains.Instituicao)">
             <summary>
-            Altera um usuario
+            Altera uma instituicao
             </summary>
-            <param name="usuario">Objeto a ser alterado</param>
+            <param name="instituicao">Objeto a ser alterado</param>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.InstituicaoRepository.Listar">
             <summary>
-            Mostra todos os usuarios cadastrados
+            Mostra todos as instituicoes cadastradas
             </summary>
-            <returns>Uma lista de usuarios</returns>
+            <returns>Uma lista de instituicoes</returns>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.InstituicaoRepository.Remover(System.Guid)">
             <summary>
-            Remove um usuario
+            Remove uma instituicao
             </summary>
-            <param name="id">Objeto de usuario</param>
+            <param name="id">Objeto de instituicao</param>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.ObjetivoAlunoRepository.Adicionar(ProjetoEduxRemake.Domains.ObjetivoAluno)">
             <summary>
-            Cadastra um novo usuario
+            Cadastra um novo objetivo
             </summary>
-            <param name="usuario">Objeto a ser cadastrado</param>
+            <param name="objetivoAluno">Objeto a ser cadastrado</param>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.ObjetivoAlunoRepository.BuscarPorId(System.Guid)">
             <summary>
-            Busca um usuario pelo id
+            Busca um objetivo pelo id
             </summary>
-            <param name="id">Id de usuario</param>
-            <returns>O usuario procurado</returns>
+            <param name="id">Id de objetivo</param>
+            <returns>O objetivo procurado</returns>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.ObjetivoAlunoRepository.Editar(ProjetoEduxRemake.Domains.ObjetivoAluno)">
             <summary>
-            Altera um usuario
+            Altera um objetivo
             </summary>
-            <param name="usuario">Objeto a ser alterado</param>
+            <param name="objetivoAluno">Objeto a ser alterado</param>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.ObjetivoAlunoRepository.Listar">
             <summary>
-            Mostra todos os usuarios cadastrados
+            Mostra todos os objetivos cadastrados
             </summary>
-            <returns>Uma lista de usuarios</returns>
+            <returns>Uma lista de objetivos</returns>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.ObjetivoAlunoRepository.Remover(System.Guid)">
             <summary>
-            Remove um usuario
+            Remove um objetivo
             </summary>
-            <param name="id">Objeto de usuario</param>
+            <param name="id">Objeto de objetivo</param>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.ObjetivoRepository.Adicionar(ProjetoEduxRemake.Domains.Objetivo)">
             <summary>
-            Cadastra um novo usuario
+            Cadastra um novo objetivo
             </summary>
-            <param name="usuario">Objeto a ser cadastrado</param>
+            <param name="objetivo">Objeto a ser cadastrado</param>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.ObjetivoRepository.BuscarPorId(System.Guid)">
             <summary>
-            Busca um usuario pelo id
+            Busca um objetivo pelo id
             </summary>
-            <param name="id">Id de usuario</param>
-            <returns>O usuario procurado</returns>
+            <param name="id">Id de objetivo</param>
+            <returns>O objetivo procurado</returns>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.ObjetivoRepository.Editar(ProjetoEduxRemake.Domains.Objetivo)">
             <summary>
-            Altera um usuario
+            Altera um objetivo
             </summary>
-            <param name="usuario">Objeto a ser alterado</param>
+            <param name="objetivo">Objeto a ser alterado</param>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.ObjetivoRepository.Listar">
             <summary>
-            Mostra todos os usuarios cadastrados
+            Mostra todos os objetivos cadastrados
             </summary>
-            <returns>Uma lista de usuarios</returns>
+            <returns>Uma lista de objetivos</returns>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.ObjetivoRepository.Remover(System.Guid)">
             <summary>
-            Remove um usuario
+            Remove um objetivo
             </summary>
-            <param name="id">Objeto de usuario</param>
+            <param name="id">Objeto de objetivo</param>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.PerfilRepository.Adicionar(ProjetoEduxRemake.Domains.Perfil)">
             <summary>
@@ -351,65 +680,65 @@
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.ProfessorTurmaRepository.Adicionar(ProjetoEduxRemake.Domains.ProfessorTurma)">
             <summary>
-            Cadastra um novo usuario
+            Cadastra um novo professor
             </summary>
-            <param name="usuario">Objeto a ser cadastrado</param>
+            <param name="professor">Objeto a ser cadastrado</param>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.ProfessorTurmaRepository.BuscarPorId(System.Guid)">
             <summary>
-            Busca um usuario pelo id
+            Busca um professor pelo id
             </summary>
-            <param name="id">Id de usuario</param>
-            <returns>O usuario procurado</returns>
+            <param name="id">Id de professor</param>
+            <returns>O professor procurado</returns>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.ProfessorTurmaRepository.Editar(ProjetoEduxRemake.Domains.ProfessorTurma)">
             <summary>
-            Altera um usuario
+            Altera um professor
             </summary>
-            <param name="usuario">Objeto a ser alterado</param>
+            <param name="professor">Objeto a ser alterado</param>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.ProfessorTurmaRepository.Listar">
             <summary>
-            Mostra todos os usuarios cadastrados
+            Mostra todos os professores cadastrados
             </summary>
-            <returns>Uma lista de usuarios</returns>
+            <returns>Uma lista de professores</returns>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.ProfessorTurmaRepository.Remover(System.Guid)">
             <summary>
-            Remove um usuario
+            Remove um professor
             </summary>
-            <param name="id">Objeto de usuario</param>
+            <param name="id">Objeto de professor</param>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.TurmaRepository.Adicionar(ProjetoEduxRemake.Domains.Turma)">
             <summary>
-            Cadastra um novo usuario
+            Cadastra uma novo turma
             </summary>
-            <param name="usuario">Objeto a ser cadastrado</param>
+            <param name="turma">Objeto a ser cadastrado</param>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.TurmaRepository.BuscarPorId(System.Guid)">
             <summary>
-            Busca um usuario pelo id
+            Busca uma turma pelo id
             </summary>
-            <param name="id">Id de usuario</param>
-            <returns>O usuario procurado</returns>
+            <param name="id">Id de turma</param>
+            <returns>A turma procurado</returns>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.TurmaRepository.Editar(ProjetoEduxRemake.Domains.Turma)">
             <summary>
-            Altera um usuario
+            Altera uma turma
             </summary>
-            <param name="usuario">Objeto a ser alterado</param>
+            <param name="turma">Objeto a ser alterado</param>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.TurmaRepository.Listar">
             <summary>
-            Mostra todos os usuarios cadastrados
+            Mostra todos as turmas cadastrados
             </summary>
-            <returns>Uma lista de usuarios</returns>
+            <returns>Uma lista de turmas</returns>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.TurmaRepository.Remover(System.Guid)">
             <summary>
-            Remove um usuario
+            Remove uma turma
             </summary>
-            <param name="id">Objeto de usuario</param>
+            <param name="id">Objeto de turma</param>
         </member>
         <member name="M:ProjetoEduxRemake.Repositories.UsuarioRepository.Adicionar(ProjetoEduxRemake.Domains.Usuario)">
             <summary>

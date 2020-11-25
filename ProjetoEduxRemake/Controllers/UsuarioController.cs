@@ -32,7 +32,7 @@ namespace ProjetoEduxRemake.Controllers
 
         // GET api/<UsuarioController>/5
         [HttpGet("{id}")]
-        public Usuario Get(Guid id, Usuario usuario)
+        public Usuario Get(Guid id)
         {
             return _usuarioRepository.BuscarPorId(id);
         }

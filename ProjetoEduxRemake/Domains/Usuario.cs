@@ -25,7 +25,6 @@ namespace ProjetoEduxRemake.Domains
         public DateTime DataCadastro { get; set; }
         public DateTime DataUltimoAcesso { get; set; }
         public Guid IdPerfil { get; set; }
-
         [ForeignKey("IdPerfil")]
         public Perfil Perfil { get; set; }
 

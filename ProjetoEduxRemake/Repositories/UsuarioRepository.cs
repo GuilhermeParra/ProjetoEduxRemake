@@ -63,6 +63,7 @@ namespace ProjetoEduxRemake.Repositories
         {
             try
             {
+               
                 Usuario usuarioEdit = BuscarPorId(usuario.IdUsuario);
 
                 if(usuarioEdit == null)
@@ -74,7 +75,7 @@ namespace ProjetoEduxRemake.Repositories
                 usuarioEdit.Email = usuario.Email;
                 usuarioEdit.Senha = usuario.Senha;
 
-                _context.Usuarios.Update(usuario);
+                _context.Usuarios.Update(usuarioEdit);
                 _context.SaveChanges();
 
             }

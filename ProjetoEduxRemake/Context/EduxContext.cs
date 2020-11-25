@@ -21,6 +21,7 @@ namespace ProjetoEduxRemake.Context
         public DbSet<Objetivo> Objetivos { get; set; }
         public DbSet<ObjetivoAluno> ObjetivosAlunos { get; set; }
         public DbSet<Curso> Cursos { get; set; }
+        public DbSet<Ranking> Rankings { get; set; }
 
 
 
@@ -31,7 +32,7 @@ namespace ProjetoEduxRemake.Context
             base.OnConfiguring(optionsBuilder);
         }
 
-        /*protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Curtida>()
             .HasOne(b => b.Usuario)
@@ -39,7 +40,7 @@ namespace ProjetoEduxRemake.Context
             .OnDelete(DeleteBehavior.NoAction);
 
             base.OnModelCreating(modelBuilder);
-        }*/
+        }
 
 
 
